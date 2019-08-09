@@ -16,7 +16,7 @@ export class TreeComponent implements OnInit {
   // live cycle hook
   ngOnInit() {
       this.title = 'Build tree....';
-      this.node = this._nodeService.getNode();
+      this._nodeService.getNode().subscribe(data => this.node = data);
   }
 
 }
