@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="nl" datatype="plaintext" original="ng2.template" target-language="nl">
+    <body>
+      <trans-unit id="979a2479fa31a7c56e45cf33c4d29dbda0b3ace3" datatype="html">
+        <source>Tree</source>
+        <target state="translated">Boom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit><trans-unit id="f2f4e37bd2482cd628ef6f280da6185544dc9e00" datatype="html">
+        <source>See a tree</source><target state="translated">Bekijk een boom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit><trans-unit id="ce647798a89f663c0d0cc48e0f5c953bc3bcd891" datatype="html">
+        <source>JSON placeholder</source><target state="new">JSON placeholder</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      
+      
+      <trans-unit id="356501fb47a7de720e71263c3d1cce5d6e681c4b" datatype="html">
+        <source>Welcome!</source>
+        <target state="translated">Welkom!</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit>
+      <trans-unit id="7fb1099e29660162f9154d5b2feee7743a423df6" datatype="html">
+        <source>Today</source>
+        <target state="translated">Vandaag</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit><trans-unit id="4d6ee53858628de558a18623894a03c8673bce9e" datatype="html">
+        <source>Price</source><target state="translated">Prijs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">price description</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

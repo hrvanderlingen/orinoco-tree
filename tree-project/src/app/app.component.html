@@ -1,28 +1,51 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Tree</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a i18n  class="navbar-brand" href="#">Tree</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="trees/tree" class="nav-link" routerLinkActive="active">
-          See a tree
-        </a>
-           </li><li>
-           <a routerLink="trees/placeholder" class="nav-link" routerLinkActive="active">
-          JSON placeholder
-        </a>
-      </li>     
-    </ul>   
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a i18n routerLink="trees/tree" class="nav-link" routerLinkActive="active">See a tree</a>
+            </li>
+
+            <li>
+                <a i18n routerLink="trees/placeholder" class="nav-link" routerLinkActive="active">JSON placeholder</a>
+            </li>  
+
+            <li *ngFor="let language of languageList">
+                <a class="nav-link" href="/{{language.code}}/">
+                    {{language.label}}
+                </a>
+            </li>
+
+        </ul>   
+    </div>
 </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+           
+        </div>
+        <div class="col-sm">
+            <h1 i18n>Welcome!</h1>
+
+            <p> <label i18n>Today</label>: {{ today | date:'longDate' }}</p>
+             <p> <label i18n="price description">Price</label>: {{ price| currency:'EUR' }}</p>
+             
+        </div>
+        <div class="col-sm">
+            
+        </div>
+    </div>
+</div>
 
 
 
 
 
 <div class="container">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,23 @@
+<VirtualHost tree.localhost:80>
+     ServerName tree.localhost
+     DocumentRoot "C:/xampp73/htdocs/trees/tree-project/dist"	              
+     SetEnv APPLICATION_ENV "development"
+     <Directory "C:/xampp73/htdocs/trees/tree-project/dist">
+         DirectoryIndex nl/index.html
+         AllowOverride All
+         Order allow,deny
+         Allow from all        
+     </Directory>
+	 <Directory "C:/xampp73/htdocs/trees/tree-project/dist/en">
+         DirectoryIndex index.html
+         AllowOverride All
+         Order allow,deny
+         Allow from all        
+     </Directory>
+	 <Directory "C:/xampp73/htdocs/trees/tree-project/dist/nl">
+         DirectoryIndex index.html
+         AllowOverride All
+         Order allow,deny
+         Allow from all        
+     </Directory>
+ </VirtualHost>

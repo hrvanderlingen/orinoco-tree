@@ -12,7 +12,8 @@ const routes: Routes = [
   {
     path: 'trees/placeholder',
     component: PlaceholderComponent  
-  } 
+  } ,
+  
 ];
 
 @NgModule({
