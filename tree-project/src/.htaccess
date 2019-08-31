@@ -25,7 +25,13 @@
 	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 	RewriteRule ^ - [L]
     
+    RewriteCond %{HTTP_HOST} /en/ [NC]
+    RewriteRule ^ /en/index.html
+    RewriteCond %{HTTP_HOST} /nl/ [NC]
+    RewriteRule ^ /nl/index.html
     RewriteRule ^ /index.html
+
+
 </IfModule>
 #------------
 
