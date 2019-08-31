@@ -19,6 +19,10 @@
                     {{language.label}}
                 </a>
             </li>
+            
+             <li>
+                <a i18n routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+            </li>
 
         </ul>   
     </div>
@@ -32,8 +36,6 @@
         <div class="col-sm">
             <h1 i18n>Welcome!</h1>
 
-            <p> <label i18n>Today</label>: {{ today | date:'longDate' }}</p>
-             <p> <label i18n="price description">Price</label>: {{ price| currency:'EUR' }}</p>
              
         </div>
         <div class="col-sm">

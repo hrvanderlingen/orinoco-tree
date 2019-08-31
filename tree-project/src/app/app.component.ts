@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './authentication.service';
+import { IUser } from './user';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentUser: IUser;
+    
   title = 'tree-project';
-  today = new Date();
-  price = 1050.30;
   
-  
+   constructor(      
+        private authenticationService: AuthenticationService
+    ) {
+        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    }
+   
    languageList = [ 
     { code: 'en', label: 'EN' },
     { code: 'nl', label: 'NL' }
   ];
+  
+  
+  
+  
   
 }

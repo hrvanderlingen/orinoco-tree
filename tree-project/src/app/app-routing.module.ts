@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { TreeComponent } from './tree/tree.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'trees/placeholder',
     component: PlaceholderComponent  
+  } , 
+  {
+    path: 'login',
+    component: LoginComponent  
   } ,
   
 ];
