@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { INode } from './node';
 import {Observable} from 'rxjs/Observable';
+import { environment } from './../environments/environment';
 
 // service may have injectable dependencies
 // hence the Injectable decorator
@@ -10,7 +11,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class NodeService {
 
-    private _url: string = 'https://jsonplaceholder.typicode.com/todos';
+    private _url: string = environment.jsonplaceholder_url + '/todos';
 
   constructor(private http: HttpClient) { }
   
