@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from './../authentication.service';
 import { first } from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -16,12 +17,17 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl: string;
     error = '';
+    
 
     constructor(
         private formBuilder: FormBuilder,     
-        private authenticationService: AuthenticationService
-    ) { 
-        
+        private authenticationService: AuthenticationService,
+        private route: ActivatedRoute,
+        private router: Router,
+    ) {          
+        if (this.authenticationService.currentUserValue) { 
+            this.router.navigate(['/']);
+        }
     }
 
   ngOnInit() {
@@ -29,32 +35,31 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
             email: ['', Validators.required],
             password: ['', Validators.required]
-        });     
+        }); 
+         
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';    
   }
   
   get f() { return this.loginForm.controls; }
   
   onSubmit() {
         this.submitted = true;
-
-        // stop here if form is invalid
+        
         if (this.loginForm.invalid) {
             return;
         }
-
+        
         this.loading = true;
         this.authenticationService.login(this.f.email.value, this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
-                  
+                   this.router.navigate([this.returnUrl]);
                 },
                 error => {
                     this.error = error;
                     this.loading = false;
                 });
     }
-  
-  
-
+ 
 }

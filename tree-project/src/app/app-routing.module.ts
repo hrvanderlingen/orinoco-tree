@@ -5,7 +5,12 @@ import { TreeComponent } from './tree/tree.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
+ {
+    path: '',
+    component: TreeComponent  
+  } ,
   {
     path: 'trees/tree',
     component: TreeComponent  
