@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { INode } from './node';
+import { IPlaceholder } from './placeholder';
 import {Observable} from 'rxjs/Observable';
 import { environment } from './../environments/environment';
 
@@ -9,14 +9,14 @@ import { environment } from './../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class NodeService {
+export class PlaceholderService {
 
-    private _url: string = environment.tree_rest_url + '/chemistry/rest/tree/node';
+    private _url: string = environment.jsonplaceholder_url + '/todos';
 
   constructor(private http: HttpClient) { }
   
-  getNode(): Observable<INode[]>{
-      return this.http.get<INode[]>(this._url);
+  getPlaceholder(): Observable<IPlaceholder[]>{
+      return this.http.get<IPlaceholder[]>(this._url);
   }
   
 }

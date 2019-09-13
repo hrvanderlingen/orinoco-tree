@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NodeService } from './../node.service';
+import { PlaceholderService } from './../placeholder.service';
 import { environment } from './../../environments/environment';
 
 @Component({
@@ -9,16 +9,16 @@ import { environment } from './../../environments/environment';
 })
 export class PlaceholderComponent implements OnInit {
 
- public node = [];
+ public placeholder = [];
  public title;
  public url;
     
-  constructor(private _nodeService: NodeService) { }
+  constructor(private _placeholderService: PlaceholderService) { }
 
   ngOnInit() {
         this.title = 'JSON placeholder demo page';
         this.url = environment.jsonplaceholder_url;
-      this._nodeService.getNode().subscribe(data => this.node = data);
+      this._placeholderService.getPlaceholder().subscribe(data => this.placeholder = data);
   }
 
 }

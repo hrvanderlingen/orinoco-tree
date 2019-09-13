@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NodeService } from './../node.service';
 
-
 @Component({
   selector: 'app-tree',
   templateUrl: './tree.component.html',
@@ -9,13 +8,14 @@ import { NodeService } from './../node.service';
 })
 export class TreeComponent implements OnInit {
 
-   
+    public node = [];
     public title;
   constructor(private _nodeService: NodeService) { }
 
   // live cycle hook
   ngOnInit() {
       this.title = 'Build tree....';
+       this._nodeService.getNode().subscribe(data => this.node = data);
       
   }
 
