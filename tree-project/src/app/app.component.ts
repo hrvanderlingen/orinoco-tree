@@ -9,8 +9,7 @@ import { IUser } from './user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentUser: IUser;
-  
+  currentUser: IUser;   
   title = 'tree-project';
   
    constructor(      
