@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl: string;
     error = '';
+    errorMessage: string;
     
 
     constructor(
@@ -56,7 +57,8 @@ export class LoginComponent implements OnInit {
                 data => {
                    this.router.navigate([this.returnUrl]);
                 },
-                error => {
+                error => {                  
+                    this.errorMessage = error.error.errorMessage;
                     this.error = error;
                     this.loading = false;
                 });

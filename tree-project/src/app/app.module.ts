@@ -8,9 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
 import { NodeService } from './node.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { LoginComponent } from './login/login.component';
+
+import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
 
 
 @NgModule({
@@ -28,7 +30,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [NodeService],
+  providers: [
+    NodeService,
+    { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true }   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

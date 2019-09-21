@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a i18n routerLink="trees/tree" class="nav-link" routerLinkActive="active">See a tree</a>
+                <a i18n *ngIf="currentUser" routerLink="trees/tree" class="nav-link" routerLinkActive="active">See a tree</a>
             </li>
 
             <li>
