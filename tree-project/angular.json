@@ -39,7 +39,7 @@
               "outputPath": "dist/nl",
               "i18nFile": "src/locale/messages.nl.xlf",
               "i18nFormat": "xlf",
-              "i18nMissingTranslation": "error",
+              "i18nMissingTranslation": "ignore",
               "i18nLocale": "nl_NL",
               "baseHref": "/nl/"
             },
@@ -49,7 +49,7 @@
               "i18nFile": "src/locale/messages.en.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "en_GB",
-              "i18nMissingTranslation": "error",
+              "i18nMissingTranslation": "ignore",
               "baseHref": "/en/"
             },
             "production": {
