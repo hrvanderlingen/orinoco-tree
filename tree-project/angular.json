@@ -41,7 +41,13 @@
               "i18nFormat": "xlf",
               "i18nMissingTranslation": "ignore",
               "i18nLocale": "nl_NL",
-              "baseHref": "/nl/"
+              "baseHref": "/nl/",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
             },
             "en": {
               "aot": true,
@@ -50,7 +56,13 @@
               "i18nFormat": "xlf",
               "i18nLocale": "en_GB",
               "i18nMissingTranslation": "ignore",
-              "baseHref": "/en/"
+              "baseHref": "/en/",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
             },
             "production": {
               "fileReplacements": [

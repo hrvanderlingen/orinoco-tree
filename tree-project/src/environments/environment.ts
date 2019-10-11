@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   jsonplaceholder_url: 'https://jsonplaceholder.typicode.com',
-  tree_rest_url: 'http://assessmentee-zf3.localhost'
+  tree_rest_url: 'http://orinoco.localhost'
 };
 
 /*
