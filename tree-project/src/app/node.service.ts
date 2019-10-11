@@ -12,11 +12,16 @@ import { environment } from './../environments/environment';
 export class NodeService {
 
     private _url: string = environment.tree_rest_url + '/chemistry/rest/tree/node';
+    private new_tree_url: string = environment.tree_rest_url + '/chemistry/rest/tree/new';
 
   constructor(private http: HttpClient) { }
   
   getNode(): Observable<INode[]>{
       return this.http.get<INode[]>(this._url);
   }
+
+  newTree(): Observable<INode[]>{
+    return this.http.get<INode[]>(this.new_tree_url);
+}
   
 }

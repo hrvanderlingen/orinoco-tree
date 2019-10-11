@@ -3,7 +3,7 @@
 <p>{{url}}</p>
 
 
-<ul>
+<ul *ngIf="placeholder.length > 0">
     <li *ngFor="let item of placeholder; let i = index">
         {{item.title}}
 </li>
