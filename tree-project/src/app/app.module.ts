@@ -14,7 +14,6 @@ import { LoginComponent } from './login/login.component';
 
 import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
 import { HomeComponent } from './home/home.component';
-import { JwPaginationComponent } from 'jw-angular-pagination';
 import { AdminComponent } from './admin/admin.component';
 
 
@@ -25,7 +24,6 @@ import { AdminComponent } from './admin/admin.component';
     PlaceholderComponent,
     LoginComponent,
     HomeComponent,
-    JwPaginationComponent,
     AdminComponent
    
   ],

@@ -9,14 +9,12 @@
 <p>{{url}}</p>
 
 <ul *ngIf="items.length > 0">
-    <li *ngFor="let item of pageOfItems; let i = index">
+    <li *ngFor="let item of items; let i = index">
         {{item.title}}
 </li>
 </ul>
 
-<div class="pb-0 pt-3">
-    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
-</div>
+
 
       </div>
 

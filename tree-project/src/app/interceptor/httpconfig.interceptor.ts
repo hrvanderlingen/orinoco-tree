@@ -16,7 +16,7 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable()
 export class HttpConfigInterceptor implements HttpInterceptor {
     
-    private currentUser;
+    public currentUser;
     
     constructor() { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
