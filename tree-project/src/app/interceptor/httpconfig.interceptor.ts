@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Role } from './../model/role';
 
 import {
     HttpInterceptor,
@@ -28,7 +29,11 @@ export class HttpConfigInterceptor implements HttpInterceptor {
              if (token) {
                 request = request.clone({ headers: request.headers.set('Authorization', 'Bearer ' + token) });
             }
-        }      
+        }  
+        
+       
+
+        
       
         if (!request.headers.has('Content-Type')) {
             request = request.clone({ headers: request.headers.set('Content-Type', 'application/json') });
@@ -52,5 +57,5 @@ export class HttpConfigInterceptor implements HttpInterceptor {
                 
                 return throwError(error);
             }));
-    }
+    }  
 }

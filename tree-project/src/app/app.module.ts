@@ -13,6 +13,9 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { LoginComponent } from './login/login.component';
 
 import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
+import { HomeComponent } from './home/home.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
     AppComponent,
     TreeComponent,
     PlaceholderComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    JwPaginationComponent,
+    AdminComponent
    
   ],
   imports: [

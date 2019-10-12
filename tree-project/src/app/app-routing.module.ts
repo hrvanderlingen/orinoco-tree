@@ -2,14 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { TreeComponent } from './tree/tree.component';
+import { HomeComponent } from './home/home.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { Role } from './model/role';
+import { AuthGuard } from './_helper/auth.guard';
 
 
 const routes: Routes = [
  {
     path: '',
-    component: TreeComponent  
+    component: HomeComponent  
+  } ,
+  {
+    path: 'trees/home',
+    component: HomeComponent  
   } ,
   {
     path: 'trees/tree',
@@ -23,6 +31,12 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent  
   } ,
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] }
+},
   
 ];
 
