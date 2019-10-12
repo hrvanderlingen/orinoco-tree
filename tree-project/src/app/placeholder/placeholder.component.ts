@@ -9,16 +9,22 @@ import { environment } from './../../environments/environment';
 })
 export class PlaceholderComponent implements OnInit {
 
- public placeholder = [];
+ public items = [];
  public title;
  public url;
+ public pageOfItems: Array<any>;
     
   constructor(private _placeholderService: PlaceholderService) { }
 
   ngOnInit() {
         this.title = 'JSON placeholder demo page';
         this.url = environment.jsonplaceholder_url;
-      this._placeholderService.getPlaceholder().subscribe(data => this.placeholder = data);
+      this._placeholderService.getPlaceholder().subscribe(data => this.items = data);
   }
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+}
 
 }

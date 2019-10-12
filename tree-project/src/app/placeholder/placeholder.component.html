@@ -1,10 +1,25 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-11 col-md-9 col-lg-7 mx-auto">
+       
+
+
 <p>{{title}}</p>
 
 <p>{{url}}</p>
 
-
-<ul *ngIf="placeholder.length > 0">
-    <li *ngFor="let item of placeholder; let i = index">
+<ul *ngIf="items.length > 0">
+    <li *ngFor="let item of pageOfItems; let i = index">
         {{item.title}}
 </li>
 </ul>
+
+<div class="pb-0 pt-3">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+</div>
+
+      </div>
+
+      
+    </div>
+  </div>
