@@ -8,12 +8,11 @@
 
 <p>{{url}}</p>
 
-<ul *ngIf="items.length > 0">
-    <li *ngFor="let item of items; let i = index">
-        {{item.title}}
-</li>
+<ul *ngIf="pageOfItems.length > 0">
+  <li *ngFor="let item of pageOfItems | paginate: { itemsPerPage: 10, currentPage: p }">{{item.title}}</li>
 </ul>
-
+           
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 
 
       </div>
