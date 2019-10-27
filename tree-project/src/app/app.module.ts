@@ -13,6 +13,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoadingStrategy } from './_helper/loading.strategy';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { AdminComponent } from './admin/admin.component';
     NgxPaginationModule
   ],
   providers: [
-    NodeService,
+    NodeService, LoadingStrategy,
     { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true }   
   ],
   bootstrap: [AppComponent]

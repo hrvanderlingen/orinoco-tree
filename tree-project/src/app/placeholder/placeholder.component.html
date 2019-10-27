@@ -8,7 +8,7 @@
 
 <p>{{url}}</p>
 
-<ul *ngIf="pageOfItems.length > 0">
+<ul *ngIf="pageOfItems !== undefined && pageOfItems.length > 0">
   <li *ngFor="let item of pageOfItems | paginate: { itemsPerPage: 10, currentPage: p }">{{item.title}}</li>
 </ul>
            

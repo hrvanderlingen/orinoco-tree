@@ -14,6 +14,10 @@
                 <a i18n routerLink="trees/placeholder" class="nav-link" routerLinkActive="active">JSON placeholder</a>
             </li>  
 
+            <li>
+                <a i18n routerLink="molecule-list" class="nav-link" routerLinkActive="active">Molecules</a>
+            </li>  
+
             <li *ngFor="let language of languageList">
                 <a class="nav-link" href="/{{language.code}}/">
                     {{language.label}}
