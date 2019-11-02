@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   jsonplaceholder_url: 'https://jsonplaceholder.typicode.com',
-  tree_rest_url: 'http://orinoco.localhost'
+  tree_rest_url: 'http://orinoco.localhost',
+  rsc_url: 'https://api.rsc.org/compounds/v1/lookups'
 };
 
 /*

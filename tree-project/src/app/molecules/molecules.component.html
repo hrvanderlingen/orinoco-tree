@@ -1,1 +1,22 @@
-<p i18n>molecules section</p>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-11 col-md-9 col-lg-7 mx-auto">
+       
+
+
+<p>{{title}}</p>
+
+<p>{{url}}</p>
+
+<ul *ngIf="pageOfItems !== undefined && pageOfItems.length > 0">
+  <li *ngFor="let item of pageOfItems | paginate: { itemsPerPage: 10, currentPage: p }">{{item.title}}</li>
+</ul>
+           
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+
+      </div>
+
+      
+    </div>
+  </div>

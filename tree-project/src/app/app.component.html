@@ -14,7 +14,7 @@
                 <a i18n routerLink="trees/placeholder" class="nav-link" routerLinkActive="active">JSON placeholder</a>
             </li>  
 
-            <li>
+            <li *ngIf="currentUser">
                 <a i18n routerLink="molecule-list" class="nav-link" routerLinkActive="active">Molecules</a>
             </li>  
 

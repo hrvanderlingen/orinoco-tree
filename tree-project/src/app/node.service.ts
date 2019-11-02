@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { INode } from './model/node';
 import {Observable} from 'rxjs/Observable';
 import { environment } from './../environments/environment';
+import { HttpHeaders } from '@angular/common/http';
 
 // service may have injectable dependencies
 // hence the Injectable decorator
