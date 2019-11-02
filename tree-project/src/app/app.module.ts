@@ -14,6 +14,8 @@ import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoadingStrategy } from './_helper/loading.strategy';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { LoadingStrategy } from './_helper/loading.strategy';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot()
   ],
   providers: [
     NodeService, LoadingStrategy,
