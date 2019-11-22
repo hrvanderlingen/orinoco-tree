@@ -12,7 +12,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class NodeService {
 
-    private _url: string = environment.tree_rest_url + '/chemistry/rest/tree/node';
+    private _url: string = environment.tree_rest_url + '/chemistry/rest/tree/products';
     private new_tree_url: string = environment.tree_rest_url + '/chemistry/rest/tree/new';
 
   constructor(private http: HttpClient) { }

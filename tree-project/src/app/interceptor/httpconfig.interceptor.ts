@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Role } from './../model/role';
 import { ToastrService } from 'ngx-toastr';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from './../authentication.service';
 
 import {
     HttpInterceptor,
@@ -19,7 +21,11 @@ export class HttpConfigInterceptor implements HttpInterceptor {
     
     public currentUser;
     
-    constructor(private toastr: ToastrService) { }
+    constructor(
+        private toastr: ToastrService,
+        private router: Router,
+        private authenticationService: AuthenticationService
+        ) { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));  
@@ -45,13 +51,15 @@ export class HttpConfigInterceptor implements HttpInterceptor {
                 }
                 return event;
             }),
-            catchError((error: HttpErrorResponse) => {
-                let data = {};console.log(error.error.message);
-                data = {
-                    reason: error && error.error && error.error.reason ? error.error.reason : '',
-                    status: error.status
-                };
-                this.toastr.error(error.error.message, error.statusText);
+            catchError((error: HttpErrorResponse) => {  
+                var message  = error && error.error && error.error.errorMessage?error.error.errorMessage: error.message;
+                this.toastr.error(message, error.statusText);
+                if(error.status === 401 &&  request.url.includes("login") === false){
+                    this.authenticationService.logout();
+                    this.router.navigate(['/login']);
+                }
+                               
+                
                 return throwError(error);
             }));
     }  
