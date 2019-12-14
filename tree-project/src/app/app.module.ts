@@ -16,6 +16,8 @@ import { AdminComponent } from './admin/admin.component';
 import { LoadingStrategy } from './_helper/loading.strategy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AngularSplitModule } from 'angular-split';
+import { SplitComponent } from './split/split.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { ToastrModule } from 'ngx-toastr';
     PlaceholderComponent,
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    SplitComponent
    
   ],
   imports: [
@@ -36,7 +39,8 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     NgxPaginationModule,
     BrowserAnimationsModule, 
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularSplitModule.forRoot(),
   ],
   providers: [
     NodeService, LoadingStrategy,

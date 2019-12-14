@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { Role } from './model/role';
 import { AuthGuard } from './_helper/auth.guard';
 import { LoadingStrategy } from './_helper/loading.strategy';
+import { SplitComponent } from './split/split.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
    loadChildren: () => import('./molecules/molecules.module').then(m => m.MoleculesModule),
    data: {preload: true}
   },
+  {
+    path: 'trees/split',
+    component: SplitComponent  
+  } , 
   
 ];
 
