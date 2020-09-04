@@ -5,12 +5,13 @@
   "projects": {
     "tree-project": {
       "i18n": {
+        "sourceLocale": "en-US",
         "locales": {
-          "nl_NL": {
+          "nl": {
             "translation": "src/locale/messages.nl.xlf",
             "baseHref": "/nl/"
           },
-          "en_GB": {
+          "en": {
             "translation": "src/locale/messages.en.xlf",
             "baseHref": "/en/"
           }
@@ -54,7 +55,7 @@
           },
           "configurations": {
             "nl": {
-              "outputPath": "dist/nl",
+              "outputPath": "dist/nl/nl_NL",
               "i18nFile": "src/locale/messages.nl.xlf",
               "i18nMissingTranslation": "ignore",
               "i18nLocale": "nl_NL",
@@ -66,7 +67,7 @@
               ],
             },
             "en": {
-              "outputPath": "dist/en/",
+              "outputPath": "dist/en/en_GB",
               "i18nFile": "src/locale/messages.en.xlf",
               "i18nLocale": "en_GB",
               "i18nMissingTranslation": "ignore",
