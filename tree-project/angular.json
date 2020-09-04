@@ -4,6 +4,18 @@
   "newProjectRoot": "projects",
   "projects": {
     "tree-project": {
+      "i18n": {
+        "locales": {
+          "nl_NL": {
+            "translation": "src/locale/messages.nl.xlf",
+            "baseHref": "/nl/"
+          },
+          "en_GB": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -18,7 +30,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -42,13 +54,10 @@
           },
           "configurations": {
             "nl": {
-              "aot": true,
               "outputPath": "dist/nl",
               "i18nFile": "src/locale/messages.nl.xlf",
-              "i18nFormat": "xlf",
               "i18nMissingTranslation": "ignore",
               "i18nLocale": "nl_NL",
-              "baseHref": "/nl/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -57,13 +66,10 @@
               ],
             },
             "en": {
-              "aot": true,
               "outputPath": "dist/en/",
               "i18nFile": "src/locale/messages.en.xlf",
-              "i18nFormat": "xlf",
               "i18nLocale": "en_GB",
               "i18nMissingTranslation": "ignore",
-              "baseHref": "/en/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -83,7 +89,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,

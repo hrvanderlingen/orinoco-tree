@@ -85,9 +85,9 @@ export class SplitComponent implements OnInit {
       },
   } 
 
-  @ViewChild('split', {static: false}) split: AngularSplitComponent;
-  @ViewChild('area1', {static: false}) area1: SplitAreaDirective;
-  @ViewChild('area2', {static: false}) area2: SplitAreaDirective;
+  @ViewChild('split') split: AngularSplitComponent;
+  @ViewChild('area1') area1: SplitAreaDirective;
+  @ViewChild('area2') area2: SplitAreaDirective;
 
   dragEnd(unit, {sizes}) {
     if(unit === 'percent') {
