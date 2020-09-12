@@ -54,12 +54,11 @@
             ]
           },
           "configurations": {
-            "nl": {
-              "outputPath": "dist/nl/nl_NL",
+            "nl": {            
               "i18nFile": "src/locale/messages.nl.xlf",
               "localize": ["nl"],
               "i18nMissingTranslation": "ignore",
-              "i18nLocale": "nl_NL",
+              "i18nLocale": "nl",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -67,8 +66,7 @@
                 }
               ]
             },
-            "en": {
-              "outputPath": "dist/en/en_GB", 
+            "en": {             
               "localize": ["en"],            
               "fileReplacements": [
                 {
