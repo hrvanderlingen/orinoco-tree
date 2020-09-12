@@ -16,31 +16,100 @@
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit><trans-unit id="ce647798a89f663c0d0cc48e0f5c953bc3bcd891" datatype="html">
-        <source>JSON placeholder</source><target state="new">JSON placeholder</target>
+        <source>JSON placeholder</source><target state="translated">JSON placeholder</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
-      </trans-unit>
-      
-      
-      <trans-unit id="356501fb47a7de720e71263c3d1cce5d6e681c4b" datatype="html">
-        <source>Welcome!</source>
-        <target state="translated">Welkom!</target>
-        
-      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit>
-      <trans-unit id="7fb1099e29660162f9154d5b2feee7743a423df6" datatype="html">
-        <source>Today</source>
-        <target state="translated">Vandaag</target>
-        
-      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit><trans-unit id="4d6ee53858628de558a18623894a03c8673bce9e" datatype="html">
-        <source>Price</source><target state="translated">Prijs</target>
+      </trans-unit><trans-unit id="96b0ce757323704e1498dcfd95c9017c56034c68" datatype="html">
+        <source>Molecules</source><target state="new">Moleculen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">18</context>
         </context-group>
-        <note priority="1" from="description">price description</note>
+      </trans-unit><trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source><target state="new">Log in</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit><trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source><target state="new">Log uit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit><trans-unit id="6b52be908edcc02c7d8047a16b8c208dea200c0b" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Hi <x id="INTERPOLATION" equiv-text="{{currentUser.firstname}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/></source><target state="new"><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Hi <x id="INTERPOLATION" equiv-text="{{currentUser.firstname}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit><trans-unit id="c4990c725ae621a7f41048cc543bccd4824a72ee" datatype="html">
+        <source>Split</source><target state="new">Splits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit><trans-unit id="1197d514ac6fa84cfaf55010420b1535a4365e0c" datatype="html">
+        <source>New tree</source><target state="new">Nieuwe boom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/tree/tree.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit><trans-unit id="sign-in" datatype="html">
+        <source>Sign In</source><target state="new">Log hier in</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit><trans-unit id="69b6ac577a19acc39fc0c22342092f327fff2529" datatype="html">
+        <source>Email address</source><target state="new">Email adres</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit><trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source><target state="new">Wachtwoord</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit><trans-unit id="287d3301a32a65a1b31116bda5d3a6463158c42a" datatype="html">
+        <source>Sign in</source><target state="new">Log in</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit><trans-unit id="welcome" datatype="html">
+        <source>Welcome!</source><target state="new">Welkom!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit><trans-unit id="welcome-subheader" datatype="html">
+        <source>The Tree demo website</source><target state="final">De boom demo website</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit><trans-unit id="angular-version-9" datatype="html">
+        <source>Angular version: 9</source><target state="final">Angular versie: 9</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit><trans-unit id="overview" datatype="html">
+        <source>Overview</source><target state="new">Overzicht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/molecules/molecules.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
       </trans-unit>
+      
+      
+      
+      
     </body>
   </file>
 </xliff>
