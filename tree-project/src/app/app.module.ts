@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularSplitModule } from 'angular-split';
 import { SplitComponent } from './split/split.component';
-
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { SplitComponent } from './split/split.component';
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
     AngularSplitModule.forRoot(),
+    NgxExtendedPdfViewerModule,
   ],
   providers: [
     NodeService, LoadingStrategy,
