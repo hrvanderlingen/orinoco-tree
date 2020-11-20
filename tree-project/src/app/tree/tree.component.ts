@@ -21,7 +21,6 @@ export class TreeComponent implements OnInit {
 
   newTree() {   
     this._nodeService.newTree().subscribe(data => this.node = data);
-
     this._nodeService.getNode().subscribe(data => this.node = data);
   }
 
