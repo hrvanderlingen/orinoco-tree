@@ -1,4 +1,9 @@
 <p>admin works!</p>
 
 
-<ngx-extended-pdf-viewer [src]="pdf_file" useBrowserLocale="true" height="80vh"></ngx-extended-pdf-viewer>
+<p>{{file_name}}</p>
+
+
+<ngx-extended-pdf-viewer [base64Src]="binaryString" useBrowserLocale="true" height="80vh">
+
+</ngx-extended-pdf-viewer>
